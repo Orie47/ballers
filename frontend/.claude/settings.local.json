@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(pkill -f \"vite --port 5183\")",
+      "Bash(pkill -f \"mock-api.js\")"
+    ]
+  }
+}
