@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SPORTS, MY_LOCATION } from '../constants'
+import { SPORTS, MY_LOCATION, CURRENT_USER_ID } from '../constants'
 import { formatSportLabel } from '../utils/format'
 
 const fieldClass =
@@ -20,6 +20,9 @@ function PostGameForm({ onSubmit, onCancel }) {
       startTime: new Date(startTime).toISOString(),
       lat: MY_LOCATION.lat,
       lng: MY_LOCATION.lng,
+      // The backend requires the host's id (GameRequest.hostId); we host as the
+      // current demo user.
+      hostId: CURRENT_USER_ID,
     }).finally(() => setSubmitting(false))
   }
 

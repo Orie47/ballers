@@ -133,6 +133,7 @@ function App() {
       {showRatePlayerModal && (
         <Modal title="Rate a player" onClose={() => setShowRatePlayerModal(false)}>
           <RatePlayerForm
+            games={games}
             onSubmit={handleRatePlayer}
             onCancel={() => setShowRatePlayerModal(false)}
           />
